@@ -201,16 +201,10 @@ export function HeroSection() {
                 delay: 0.18,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="absolute left-[50%] top-[46%] z-20 h-[405px] w-[405px] -translate-x-1/2 -translate-y-1/2 sm:h-[520px] sm:w-[520px] lg:left-[49%] lg:top-[46%] lg:h-[610px] lg:w-[610px] xl:h-[685px] xl:w-[685px]"
+              className="absolute left-[50%] top-[44%] z-20 h-[330px] w-[330px] -translate-x-1/2 -translate-y-1/2 sm:h-[420px] sm:w-[420px] lg:left-[49%] lg:top-[44%] lg:h-[500px] lg:w-[500px] xl:h-[560px] xl:w-[560px]"
             >
               <div className="hero-metal-object">
-                <span className="hero-metal-core" />
-                <span className="hero-orbit hero-orbit-one" />
-                <span className="hero-orbit hero-orbit-two" />
-                <span className="hero-orbit hero-orbit-three" />
-                <span className="hero-orbit-dot hero-dot-one" />
-                <span className="hero-orbit-dot hero-dot-two" />
-                <span className="hero-orbit-dot hero-dot-three" />
+                <span className="hero-metal-glow" />
                 <span className="hero-metal-asset" />
               </div>
             </motion.div>
