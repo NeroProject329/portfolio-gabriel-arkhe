@@ -30,17 +30,17 @@ export function Header() {
         <Link
           href="#inicio"
           onClick={closeMenu}
-          className="font-display text-[64px] font-medium leading-none tracking-[-0.06em] text-white sm:text-[68px] lg:text-[80px]"
+          className="font-display text-[12px] font-medium leading-none tracking-[-0.06em] text-white sm:text-[25px] lg:text-[35px]"
         >
           Gabriel Arkhé
         </Link>
 
-        <nav className="hidden items-center gap-[24px] lg:flex">
+        <nav className="hidden items-center gap-[60px] lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[0.5px] font-light uppercase tracking-[0.01em] text-white/58 transition duration-300 hover:text-white"
+              className="text-[10.5px] font-light uppercase tracking-[0.09em] text-white/58 transition duration-300 hover:text-white"
             >
               {item.label}
             </Link>
