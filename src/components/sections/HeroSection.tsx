@@ -90,8 +90,8 @@ export function HeroSection() {
       <div className="grain-overlay" />
 
       <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1760px] flex-col px-5 pb-10 pt-[122px] sm:px-8 lg:px-[76px] lg:pt-[112px]">
-        <div className="grid flex-1 items-center gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-0">
-          <div className="relative z-40 max-w-[820px] pt-0 lg:pl-[24px] lg:pt-8">
+        <div className="grid flex-1 items-center gap-8 lg:grid-cols-[0.73fr_1.27fr] lg:gap-0">
+          <div className="relative z-40 max-w-[700px] pt-0 lg:pl-[0px] lg:pt-6">
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export function HeroSection() {
                 delay: 0.05,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="font-display max-w-[790px] text-[clamp(3.75rem,9.8vw,6.7rem)] font-medium leading-[0.94] tracking-[-0.06em] text-white sm:text-[clamp(4.5rem,8.2vw,7rem)] lg:text-[clamp(5rem,4.28vw,6.45rem)]"
+              className="font-display max-w-[630px] text-[clamp(3.05rem,3.45vw,4.95rem)] font-normal leading-[0.98] tracking-[-0.055em] text-white"
             >
               <span className="block">Sites, lojas e sistemas</span>
               <span className="block">criados para vender mais</span>
@@ -126,7 +126,7 @@ export function HeroSection() {
                 delay: 0.16,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="mt-8 max-w-[620px] text-balance text-[19px] leading-[1.62] tracking-[-0.025em] text-white/62 sm:text-[20px] lg:text-[21px]"
+              className="mt-7 max-w-[520px] text-[16px] leading-[1.6] tracking-[-0.02em] text-white/58 lg:text-[17px]"
             >
               Soluções digitais completas que unem estratégia, experiência e
               código de alta performance.
@@ -192,7 +192,7 @@ export function HeroSection() {
             </motion.div>
           </div>
 
-          <div className="hero-stage relative z-20 min-h-[690px] sm:min-h-[790px] lg:min-h-[790px] xl:min-h-[835px]">
+          <div className="hero-stage relative z-20 min-h-[640px] sm:min-h-[720px] lg:min-h-[700px] xl:min-h-[735px]">
             <motion.div
               initial={{ opacity: 0, scale: 0.84, rotate: -8 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -201,7 +201,7 @@ export function HeroSection() {
                 delay: 0.18,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="absolute left-[50%] top-[44%] z-20 h-[330px] w-[330px] -translate-x-1/2 -translate-y-1/2 sm:h-[420px] sm:w-[420px] lg:left-[49%] lg:top-[44%] lg:h-[500px] lg:w-[500px] xl:h-[560px] xl:w-[560px]"
+              className="absolute left-[49%] top-[42%] z-20 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 sm:h-[390px] sm:w-[390px] lg:left-[49%] lg:top-[43%] lg:h-[455px] lg:w-[455px] xl:h-[505px] xl:w-[505px]"
             >
               <div className="hero-metal-object">
                 <span className="hero-metal-glow" />
@@ -215,7 +215,7 @@ export function HeroSection() {
               priority
               delay={0.35}
               float="slow"
-              className="left-[2%] top-[-2%] h-[185px] w-[360px] -rotate-[5deg] sm:left-[6%] sm:top-[0%] sm:h-[225px] sm:w-[435px] lg:left-[6%] lg:top-[1%] xl:h-[260px] xl:w-[505px]"
+              className="left-[7%] top-[0%] h-[170px] w-[335px] -rotate-[5deg] sm:left-[8%] sm:top-[1%] sm:h-[205px] sm:w-[405px] lg:left-[7%] lg:top-[2%] xl:h-[230px] xl:w-[455px]"
             />
 
             <FloatingMockup
@@ -223,7 +223,7 @@ export function HeroSection() {
               alt="Mockup editorial contents"
               delay={0.43}
               float="medium"
-              className="left-[-8%] top-[36%] h-[185px] w-[350px] rotate-[2deg] sm:left-[-4%] sm:top-[38%] sm:h-[238px] sm:w-[450px] lg:left-[-6%] lg:top-[39%] xl:h-[280px] xl:w-[535px]"
+              className="left-[-2%] top-[38%] h-[170px] w-[335px] rotate-[2deg] sm:left-[-1%] sm:top-[39%] sm:h-[215px] sm:w-[425px] lg:left-[-3%] lg:top-[39%] xl:h-[245px] xl:w-[485px]"
             />
 
             <FloatingMockup
@@ -231,7 +231,7 @@ export function HeroSection() {
               alt="Mockup de loja virtual coleção essencial"
               delay={0.5}
               float="fast"
-              className="right-[-9%] top-[2%] h-[180px] w-[365px] rotate-[4deg] sm:right-[-5%] sm:top-[3%] sm:h-[230px] sm:w-[465px] lg:right-[-5%] lg:top-[3%] xl:h-[275px] xl:w-[570px]"
+              className="right-[-1%] top-[5%] h-[165px] w-[340px] rotate-[4deg] sm:right-[0%] sm:top-[5%] sm:h-[205px] sm:w-[425px] lg:right-[-1%] lg:top-[5%] xl:h-[235px] xl:w-[495px]"
             />
 
             <FloatingMockup
@@ -239,7 +239,7 @@ export function HeroSection() {
               alt="Mockup de dashboard escuro"
               delay={0.56}
               float="slow"
-              className="right-[-4%] bottom-[14%] h-[210px] w-[370px] rotate-[4deg] sm:right-[-2%] sm:bottom-[14%] sm:h-[270px] sm:w-[475px] lg:right-[-1%] lg:bottom-[15%] xl:h-[330px] xl:w-[580px]"
+              className="right-[1%] bottom-[18%] h-[185px] w-[345px] rotate-[4deg] sm:right-[2%] sm:bottom-[17%] sm:h-[235px] sm:w-[440px] lg:right-[1%] lg:bottom-[17%] xl:h-[270px] xl:w-[510px]"
             />
 
             <FloatingMockup
@@ -247,7 +247,7 @@ export function HeroSection() {
               alt="Mockup performance que impulsiona resultados"
               delay={0.62}
               float="medium"
-              className="left-[22%] bottom-[2%] h-[170px] w-[360px] rotate-[4deg] sm:left-[27%] sm:bottom-[4%] sm:h-[220px] sm:w-[465px] lg:left-[23%] lg:bottom-[6%] xl:h-[270px] xl:w-[560px]"
+              className="left-[26%] bottom-[5%] h-[155px] w-[335px] rotate-[4deg] sm:left-[29%] sm:bottom-[6%] sm:h-[200px] sm:w-[430px] lg:left-[27%] lg:bottom-[7%] xl:h-[230px] xl:w-[500px]"
             />
           </div>
         </div>
@@ -260,7 +260,7 @@ export function HeroSection() {
             delay: 0.72,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="relative z-30 mx-auto mt-7 w-full max-w-[940px] lg:mt-0"
+          className="relative z-30 mx-auto mt-3 w-full max-w-[900px] lg:-mt-3"
         >
           <div className="mb-5 flex items-center gap-5 text-center">
             <span className="h-px flex-1 bg-white/10" />
