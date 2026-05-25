@@ -36,6 +36,7 @@ type FloatingMockupProps = {
   src: string;
   alt: string;
   className?: string;
+  perspectiveClassName?: string;
   delay?: number;
   priority?: boolean;
   float?: "slow" | "medium" | "fast";
@@ -45,36 +46,43 @@ function FloatingMockup({
   src,
   alt,
   className,
+  perspectiveClassName,
   delay = 0,
   priority = false,
   float = "medium",
 }: FloatingMockupProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 42, rotateX: 8 }}
-      animate={{ opacity: 1, y: 0, rotateX: 0 }}
+      initial={{ opacity: 0, y: 42 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.95,
         delay,
         ease: [0.22, 1, 0.36, 1],
       }}
       className={cn(
-        "mockup-card pointer-events-none absolute z-20",
-        "drop-shadow-[0_34px_90px_rgba(0,0,0,0.72)]",
+        "pointer-events-none absolute z-20",
         float === "slow" && "float-slow",
         float === "medium" && "float-medium",
         float === "fast" && "float-fast",
         className
       )}
     >
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        priority={priority}
-        sizes="(max-width: 768px) 70vw, (max-width: 1200px) 42vw, 560px"
-        className="object-contain"
-      />
+      <div
+        className={cn(
+          "mockup-card relative h-full w-full drop-shadow-[0_34px_90px_rgba(0,0,0,0.72)] [transform-style:preserve-3d]",
+          perspectiveClassName
+        )}
+      >
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes="(max-width: 768px) 70vw, (max-width: 1200px) 42vw, 560px"
+          className="object-contain"
+        />
+      </div>
     </motion.div>
   );
 }
@@ -215,7 +223,8 @@ export function HeroSection() {
               priority
               delay={0.35}
               float="slow"
-              className="left-[4%] top-[-1%] h-[175px] w-[350px] -rotate-[5deg] sm:left-[5%] sm:top-[0%] sm:h-[215px] sm:w-[425px] lg:left-[4%] lg:top-[1%] xl:h-[245px] xl:w-[490px]"
+              className="left-[4%] top-[-1%] h-[275px] w-[550px]  sm:left-[5%] sm:top-[0%] sm:h-[215px] sm:w-[425px] lg:left-[-3%] lg:top-[1%] xl:h-[285px] xl:w-[400px]"
+              perspectiveClassName="[transform:perspective(400px)_rotateY(20deg)_rotateX(20deg)_rotateZ(3deg)]"
             />
 
             <FloatingMockup
@@ -223,7 +232,8 @@ export function HeroSection() {
               alt="Mockup editorial contents"
               delay={0.43}
               float="medium"
-              className="left-[-10%] top-[39%] h-[175px] w-[340px] rotate-[2deg] sm:left-[-7%] sm:top-[40%] sm:h-[225px] sm:w-[435px] lg:left-[-8%] lg:top-[41%] xl:h-[255px] xl:w-[505px]"
+              className="left-[-30%] top-[39%] h-[175px] w-[370px] sm:left-[-7%] sm:top-[40%] sm:h-[225px] sm:w-[435px] lg:left-[-8%] lg:top-[41%] xl:h-[295px] xl:w-[400px]"
+              perspectiveClassName="[transform:perspective(1200px)_rotateY(25deg)_rotateX(-3deg)_rotateZ(-6deg)]"
             />
 
             <FloatingMockup
@@ -231,7 +241,8 @@ export function HeroSection() {
               alt="Mockup de loja virtual coleção essencial"
               delay={0.5}
               float="fast"
-              className="right-[-10%] top-[3%] h-[175px] w-[360px] rotate-[4deg] sm:right-[-7%] sm:top-[4%] sm:h-[225px] sm:w-[455px] lg:right-[-8%] lg:top-[4%] xl:h-[260px] xl:w-[540px]"
+              className="right-[40%] top-[3%] h-[175px] w-[360px]  sm:right-[-7%] sm:top-[4%] sm:h-[225px] sm:w-[455px] lg:right-[-12%] lg:top-[-4%] xl:h-[400px] xl:w-[500px]"
+              perspectiveClassName="[transform:perspective(2000px)_rotateY(50deg)_rotateX(-10deg)_rotateZ(-7deg)]"
             />
 
             <FloatingMockup
@@ -239,7 +250,8 @@ export function HeroSection() {
               alt="Mockup de dashboard escuro"
               delay={0.56}
               float="slow"
-              className="right-[-5%] bottom-[13%] h-[200px] w-[365px] rotate-[4deg] sm:right-[-4%] sm:bottom-[14%] sm:h-[255px] sm:w-[465px] lg:right-[-4%] lg:bottom-[15%] xl:h-[300px] xl:w-[545px]"
+              className="right-[-5%] bottom-[13%] h-[200px] w-[365px]  sm:right-[-4%] sm:bottom-[14%] sm:h-[255px] sm:w-[465px] lg:right-[-2%] lg:bottom-[20%] xl:h-[300px] xl:w-[380px]"
+              perspectiveClassName="[transform:perspective(2000px)_rotateY(30deg)_rotateX(-20deg)_rotateZ(-8deg)]"
             />
 
             <FloatingMockup
@@ -247,7 +259,8 @@ export function HeroSection() {
               alt="Mockup performance que impulsiona resultados"
               delay={0.62}
               float="medium"
-              className="left-[25%] bottom-[2%] h-[160px] w-[350px] rotate-[4deg] sm:left-[28%] sm:bottom-[4%] sm:h-[205px] sm:w-[450px] lg:left-[26%] lg:bottom-[5%] xl:h-[245px] xl:w-[530px]"
+              className="left-[-26%] bottom-[30%] h-[155px] w-[335px] rotate-[4deg] sm:left-[29%] sm:bottom-[6%] sm:h-[200px] sm:w-[430px] lg:left-[17%] lg:bottom-[-5%] xl:h-[290px] xl:w-[510px]"
+              perspectiveClassName="[transform:perspective(1000px)_rotateY(-10deg)_rotateX(3deg)_rotateZ(6deg)]"
             />
           </div>
         </div>
