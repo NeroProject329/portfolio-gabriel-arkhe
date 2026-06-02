@@ -91,11 +91,14 @@ export function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative min-h-[100svh] overflow-hidden bg-[#030303] text-white"
+      className="hero-section relative min-h-[100svh] overflow-hidden bg-[#030303] text-white"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_16%,rgba(255,255,255,0.23),transparent_20%),radial-gradient(circle_at_82%_34%,rgba(255,255,255,0.08),transparent_24%),radial-gradient(circle_at_10%_20%,rgba(255,255,255,0.065),transparent_24%),linear-gradient(180deg,#050505_0%,#020202_100%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.032)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.022)_1px,transparent_1px)] bg-[size:118px_118px] opacity-[0.16]" />
       <div className="grain-overlay" />
+
+      <span className="hero-smoke-light" aria-hidden="true" />
+      <span className="hero-smoke-haze" aria-hidden="true" />
 
       <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1760px] flex-col px-5 pb-10 pt-[122px] sm:px-8 lg:px-[76px] lg:pt-[112px]">
         <div className="grid flex-1 items-center gap-8 lg:grid-cols-[0.73fr_1.27fr] lg:gap-0">
