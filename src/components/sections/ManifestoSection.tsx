@@ -1,6 +1,6 @@
 "use client";
 
-import { type ElementType, useRef } from "react";
+import { type ReactNode, useRef } from "react";
 import { Code2, Grid2X2, Target, TrendingUp } from "lucide-react";
 import {
   motion,
@@ -9,30 +9,37 @@ import {
   useTransform,
 } from "motion/react";
 
-const cards = [
+type ManifestoCard = {
+  number: string;
+  title: string;
+  text: string;
+  icon: ReactNode;
+};
+
+const cards: ManifestoCard[] = [
   {
     number: "01",
     title: "Estratégia",
     text: "Planejamento inteligente com foco em posicionamento e conversão.",
-    icon: Target,
+    icon: <Target size={22} strokeWidth={1.6} />,
   },
   {
     number: "02",
     title: "Experiência",
     text: "Design que comunica, conecta e transforma visitantes em clientes.",
-    icon: Grid2X2,
+    icon: <Grid2X2 size={22} strokeWidth={1.6} />,
   },
   {
     number: "03",
     title: "Código",
     text: "Desenvolvimento moderno, seguro e escalável com alta performance.",
-    icon: Code2,
+    icon: <Code2 size={22} strokeWidth={1.6} />,
   },
   {
     number: "04",
     title: "Resultado",
     text: "Sites que geram impacto real, autoridade e crescimento contínuo.",
-    icon: TrendingUp,
+    icon: <TrendingUp size={22} strokeWidth={1.6} />,
   },
 ];
 
@@ -106,7 +113,7 @@ type Manifesto3DCardProps = {
   number: string;
   title: string;
   text: string;
-  icon: ElementType;
+  icon: ReactNode;
   index: number;
 };
 
@@ -114,7 +121,7 @@ function Manifesto3DCard({
   number,
   title,
   text,
-  icon: Icon,
+  icon,
   index,
 }: Manifesto3DCardProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -144,9 +151,7 @@ function Manifesto3DCard({
       <div className="manifesto-card-inner">
         <div className="manifesto-card-content">
           <div className="manifesto-card-top">
-            <div className="manifesto-card-icon">
-              <Icon size={22} strokeWidth={1.6} />
-            </div>
+            <div className="manifesto-card-icon">{icon}</div>
 
             <span>{number}</span>
           </div>
